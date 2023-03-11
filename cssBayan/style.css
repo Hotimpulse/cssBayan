@@ -7,23 +7,79 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
+    top: 10rem;
 }
 
-.wrapper > .accordion {
-    max-width: 600px;
+.accordion {
+    max-width: 37.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
 }
 
-.meme {
+.bayan {
+    margin: 1rem 0rem 1rem 0rem;
+}
+
+.meme_card {
     border: 1px solid black;
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
 }
 
-.meme_title {
-    display: flex;
+/* .meme_card .active {
+    display: block;
+}
+
+.meme_content {
+    display: none;
+}
+
+.meme_card:not(.active):hover .meme_content, .meme_card.active .meme_content {
+    display: block;
+} */
+
+.accordion__label {
+    display: block;
+    position: relative;
     cursor: pointer;
     margin: 0.5rem 0.5rem;
+    transition: 0.1s;
 }
 
+.meme_content {
+    display: none;
+}
+
+.accordion__input {
+    display: none;
+}
+
+.accordion__input:checked ~ .meme_content {
+        display: block;
+}
+
+.accordion__input:checked ~ .accordion__label::after {
+    transform: translateY(-50%) rotate(0.5turn);
+}
+
+.accordion__label:hover {
+    color: #fff;
+}
+
+.accordion__label::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.75rem;
+    height: 2.375rem;
+    right: 1.25rem;
+    background: url('https://api.iconify.design/material-symbols/arrow-drop-down.svg') no-repeat center center / contain;
+    transition: transform 0.4s;
+}
 
 @media screen and (min-width: 320px) {
     body {
