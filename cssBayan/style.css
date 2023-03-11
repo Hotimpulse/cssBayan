@@ -1,5 +1,6 @@
 body {
-    font-size: 29px;
+    font-size: 2rem;
+    background-color: lightblue;
 }
 
 .wrapper {
@@ -7,18 +8,18 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: relative;
-    top: 10rem;
+    margin: 10rem 10rem;
 }
 
 .accordion {
-    max-width: 37.5rem;
+    max-width: 100%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
     border-radius: 10px;
 }
 
 .bayan {
-    margin: 1rem 0rem 1rem 0rem;
+    width: 50rem;
+    margin: 1rem 1rem 1rem 0rem;
 }
 
 .meme_card {
@@ -28,18 +29,6 @@ body {
     flex-direction: column;
     cursor: pointer;
 }
-
-/* .meme_card .active {
-    display: block;
-}
-
-.meme_content {
-    display: none;
-}
-
-.meme_card:not(.active):hover .meme_content, .meme_card.active .meme_content {
-    display: block;
-} */
 
 .accordion__label {
     display: block;
@@ -51,6 +40,7 @@ body {
 
 .meme_content {
     display: none;
+    margin: 0 auto;
 }
 
 .accordion__input {
@@ -82,21 +72,13 @@ body {
 }
 
 @media screen and (min-width: 320px) {
-    body {
-        background-color: lightblue;
-      }
+
 }
 
 @media screen and (min-width: 820px) {
-    body {
-        background-color: red;
-      }
-
     
 }
 
 @media screen and (min-width: 1920px) {
-    body {
-        background-color: black;
-      }
+
 }
