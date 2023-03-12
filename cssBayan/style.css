@@ -1,84 +1,143 @@
 body {
-    font-size: 2rem;
-    background-color: lightblue;
+  background-color: lightblue;
+}
+
+img {
+    width: 500px;
+    /* height: 550px; */
 }
 
 .wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 10rem 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10rem 10rem;
 }
 
 .accordion {
-    max-width: 100%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
-    border-radius: 10px;
-}
-
-.bayan {
-    width: 50rem;
-    margin: 1rem 1rem 1rem 0rem;
-}
+    border-radius: 0.2rem;
+  }
 
 .meme_card {
-    border: 1px solid black;
-    margin-bottom: 1rem;
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
+  border: 1px solid black;
+  border-radius: 0.2rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
 }
 
 .accordion__label {
-    display: block;
-    position: relative;
-    cursor: pointer;
-    margin: 0.5rem 0.5rem;
-    transition: 0.1s;
+  display: block;
+  position: relative;
+  cursor: pointer;
+  margin: 0.5rem 0.5rem;
+  transition: 0.1s;
 }
 
 .meme_content {
-    display: none;
-    margin: 0 auto;
+  display: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  
 }
 
 .accordion__input {
-    display: none;
+  display: none;
 }
 
 .accordion__input:checked ~ .meme_content {
-        display: block;
+  display: block;
+  color:#fff;
+  transition: opacity 0.9s ease-in-out;
+  opacity: 1;
 }
 
 .accordion__input:checked ~ .accordion__label::after {
-    transform: translateY(-50%) rotate(0.5turn);
+  transform: translateY(-50%) rotate(0.5turn);
 }
 
 .accordion__label:hover {
-    color: #fff;
+  color: #fff;
 }
 
 .accordion__label::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 1.75rem;
-    height: 2.375rem;
-    right: 1.25rem;
-    background: url('https://api.iconify.design/material-symbols/arrow-drop-down.svg') no-repeat center center / contain;
-    transition: transform 0.4s;
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.75rem;
+  height: 2.375rem;
+  right: 0.35rem;
+  background: url("https://api.iconify.design/material-symbols/arrow-drop-down.svg")
+    no-repeat center center / contain;
+  transition: transform 0.4s;
 }
 
-@media screen and (min-width: 320px) {
-
+@media screen and (max-width: 320px) {
+  body {
+    max-width: min(100% - 0rem);
+    font-size: 1rem;
+    margin: 0 auto;
+  }
+  img {
+    max-width: min(100% - 0rem);
+  }
+  .bayan {
+    width: 100%;
+    margin: 0.2rem 0rem 0.2rem 0.2rem;
+  }
+  .accordion > div {
+    width: 80%;
+    max-width: min(100% - 0rem);
+    margin: 0 auto;
+  }
 }
 
-@media screen and (min-width: 820px) {
-    
+@media screen and (min-width: 321px) and (max-width: 820px) {
+  body {
+    max-width: min(100% - 0rem);
+    font-size: 1rem;
+    margin: 0 auto;
+  }
+  img {
+    max-width: min(100% - 0rem);
+  }
+  .bayan {
+    width: 100%;
+    margin: 1rem 1rem 1rem 1rem;
+  }
+  .accordion > div {
+    width: 30rem;
+    max-width: min(100% - 0rem);
+    margin: 0 auto;
+  }
 }
 
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 821px) {
+  body {
+    width: 100%;
+    font-size: 2rem;
+    margin: 0 auto;
+  }
+
+  img {
+    max-width: min(100% - 0rem);
+  }
+
+  .bayan {
+    width: 100%;
+    margin: 1rem 1rem 1rem 1rem;
+  }
+
+  .accordion > div {
+    width: 50rem;
+    max-width: min(100% - 0rem);
+    margin: 0 auto;
+  }
 
 }
